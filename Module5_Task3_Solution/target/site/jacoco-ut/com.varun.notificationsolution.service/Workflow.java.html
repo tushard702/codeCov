@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Workflow.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">notificationsolution</a> &gt; <a href="index.source.html" class="el_package">com.varun.notificationsolution.service</a> &gt; <span class="el_source">Workflow.java</span></div><h1>Workflow.java</h1><pre class="source lang-java linenums">package com.varun.notificationsolution.service;
+
+
+import com.varun.notificationsolution.domain.Airline;
+import com.varun.notificationsolution.domain.Entry;
+import com.varun.notificationsolution.util.EntryComparator;
+import com.varun.notificationsolution.util.CSVReaderUtil;
+import com.varun.notificationsolution.util.EmailCreator;
+import com.varun.notificationsolution.util.JsonFileReaderUtil;
+import com.varun.notificationsolution.util.Utility;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.PriorityQueue;
+
+@Service
+public class Workflow {
+
+  private final JsonFileReaderUtil jsonFileReaderUtil;
+  private final CSVReaderUtil csvReaderUtil;
+  private final EmailCreator emailCreator;
+  //private final CSVReader csvReader;
+
+  @Autowired
+<span class="fc" id="L27">  public Workflow(CSVReaderUtil csvReaderUtil, JsonFileReaderUtil jsonFileReaderUtil, EmailCreator emailCreator) {</span>
+<span class="fc" id="L28">    this.jsonFileReaderUtil =  jsonFileReaderUtil;</span>
+<span class="fc" id="L29">    this.csvReaderUtil = csvReaderUtil;</span>
+<span class="fc" id="L30">    this.emailCreator = emailCreator;</span>
+
+<span class="fc" id="L32">  }</span>
+  public void execute() {
+<span class="fc" id="L34">    List&lt;Airline&gt; airlineList = null;</span>
+    //Read the airline Information and store it in a
+    try{
+<span class="fc" id="L37">      airlineList = jsonFileReaderUtil.getAllAirlines();</span>
+<span class="fc" id="L38">    }catch (Exception e) {</span>
+<span class="fc" id="L39">      System.out.println(e);</span>
+<span class="fc" id="L40">      return;</span>
+<span class="fc" id="L41">    }</span>
+    //Create a hashmap of airline with its email address
+<span class="fc" id="L43">    HashMap&lt;String, String&gt; airlineMap = Utility.airlineListToMap(airlineList);</span>
+
+    //Get the list of entries
+<span class="fc" id="L46">    List&lt;Entry&gt; entryList = null;</span>
+
+    try{
+<span class="fc" id="L49">      entryList = csvReaderUtil.getAllEntries();</span>
+<span class="fc" id="L50">    } catch (Exception e) {</span>
+<span class="fc" id="L51">      System.out.println(e);</span>
+<span class="fc" id="L52">      return;</span>
+<span class="fc" id="L53">    }</span>
+
+    //Initialize the priority queue
+<span class="fc" id="L56">    HashMap&lt;String, PriorityQueue&lt;Entry&gt;&gt; entryPriorityMap = new HashMap&lt;&gt;();</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">    for (Airline airline: airlineList) {</span>
+<span class="fc" id="L58">      entryPriorityMap.put(airline.getAirlineCode(), new PriorityQueue&lt;&gt;(100, new EntryComparator()));</span>
+<span class="fc" id="L59">    }</span>
+
+    //Insert the entries into the PriorityQueue
+<span class="fc bfc" id="L62" title="All 2 branches covered.">    for (Entry entry: entryList) {</span>
+<span class="fc" id="L63">      entryPriorityMap.get(entry.getAirlineCode()).add(entry);</span>
+<span class="fc" id="L64">    }</span>
+
+    try {
+<span class="fc" id="L67">      emailCreator.writeEmails(entryPriorityMap, airlineMap);</span>
+<span class="fc" id="L68">    } catch (Exception e) {</span>
+<span class="fc" id="L69">      System.out.println(e);</span>
+<span class="fc" id="L70">      return;</span>
+<span class="fc" id="L71">    }</span>
+
+<span class="fc" id="L73">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

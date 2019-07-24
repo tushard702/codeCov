@@ -1,0 +1,1 @@
+The Entries.csv has the entries to be processed while the Airline.json has the Airline code and the emailId of the Airline to which the mails have to be sent

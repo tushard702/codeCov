@@ -1,0 +1,4 @@
+Record_Id, Create_Date, PNR, Entry_Type, Customer_Name, Customer_Email, Airline_Code, Date_Of_Journey
+0,2019-07-26,0YDJJN,Book,Faith Dorrough,bsic071h9e@gmail.com,DAL,2019-07-06
+1,2019-07-19,8YR9PA,Cancel,Ethan Goods,0fbtz9oyn0@yahoo.com,COA,2019-07-12
+2,2019-07-17,0J6FPF,Modify,Erma Terrill,8mhmx7eeky@gmail.com,COA,2019-07-03

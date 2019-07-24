@@ -1,0 +1,12 @@
+
+airlineFilePath: Airlines.json
+entryFilePath: Entries.csv
+
+emailformat: |
+  To: %s
+  From: Expedia.com
+  Subject : Please %s the PNR %s
+  Body: Please %s the booking for PNR %s for the customer with the following details:
+  Customer Name : %s
+  Customer Email : %s
+  Date of Journey : %s

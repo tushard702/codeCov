@@ -1,0 +1,23 @@
+[
+	{
+		"airlineCode":"DAL",
+		"email" : "obuuqkgzlzu@delta.com"
+	},
+	{
+		"airlineCode":"COA",
+		"email" : "obuuqkgzlzu@continental.com"
+	},
+	{
+		"airlineCode":"DLH",
+		"email" : "obuuqkgzlzu@lufthansa.com"
+	},
+	{
+		"airlineCode":"QFA",
+		"email" : "obuuqkgzlzu@qantas.com"
+	},
+	{
+		"airlineCode":"SQC",
+		"email" : "obuuqkgzlzu@singaporeair.com"
+	}
+
+]

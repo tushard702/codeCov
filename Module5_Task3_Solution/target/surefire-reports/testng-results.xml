@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="13" passed="13">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="1092" started-at="2019-06-04T02:11:14Z" finished-at="2019-06-04T02:11:15Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="1092" started-at="2019-06-04T02:11:14Z" finished-at="2019-06-04T02:11:15Z">
+      <class name="com.varun.notificationsolution.util.EntryComparatorTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.varun.notificationsolution.util.EntryComparatorTest@7b78ed6a]" name="init" is-config="true" duration-ms="0" started-at="2019-06-04T07:41:15Z" finished-at="2019-06-04T07:41:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="firstDateGreater()[pri:0, instance:com.varun.notificationsolution.util.EntryComparatorTest@7b78ed6a]" name="firstDateGreater" duration-ms="0" started-at="2019-06-04T07:41:15Z" finished-at="2019-06-04T07:41:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstDateGreater -->
+        <test-method status="PASS" signature="equalDates()[pri:0, instance:com.varun.notificationsolution.util.EntryComparatorTest@7b78ed6a]" name="equalDates" duration-ms="0" started-at="2019-06-04T07:41:15Z" finished-at="2019-06-04T07:41:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalDates -->
+        <test-method status="PASS" signature="secondDateGreater()[pri:0, instance:com.varun.notificationsolution.util.EntryComparatorTest@7b78ed6a]" name="secondDateGreater" duration-ms="0" started-at="2019-06-04T07:41:15Z" finished-at="2019-06-04T07:41:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- secondDateGreater -->
+      </class> <!-- com.varun.notificationsolution.util.EntryComparatorTest -->
+      <class name="com.varun.notificationsolution.util.JsonFileReaderUtilTest">
+        <test-method status="PASS" signature="filePathUnreadableTest()[pri:0, instance:com.varun.notificationsolution.util.JsonFileReaderUtilTest@6fca5907]" name="filePathUnreadableTest" duration-ms="13" started-at="2019-06-04T07:41:14Z" finished-at="2019-06-04T07:41:14Z">
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[class path resource [random] cannot be resolved to absolute file path because it does not exist]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: class path resource [random] cannot be resolved to absolute file path because it does not exist
+	at org.springframework.util.ResourceUtils.getFile(ResourceUtils.java:177)
+	at com.varun.notificationsolution.util.JsonFileReaderUtil.getAllAirlines(JsonFileReaderUtil.java:25)
+	at com.varun.notificationsolution.util.JsonFileReaderUtilTest.filePathUnreadableTest(JsonFileReaderUtilTest.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filePathUnreadableTest -->
+        <test-method status="PASS" signature="positiveTest()[pri:0, instance:com.varun.notificationsolution.util.JsonFileReaderUtilTest@6fca5907]" name="positiveTest" duration-ms="104" started-at="2019-06-04T07:41:14Z" finished-at="2019-06-04T07:41:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- positiveTest -->
+      </class> <!-- com.varun.notificationsolution.util.JsonFileReaderUtilTest -->
+      <class name="com.varun.notificationsolution.service.WorkflowTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.varun.notificationsolution.service.WorkflowTest@6ec65b5e]" name="init" is-config="true" duration-ms="831" started-at="2019-06-04T07:41:14Z" finished-at="2019-06-04T07:41:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="csvReaderException()[pri:0, instance:com.varun.notificationsolution.service.WorkflowTest@6ec65b5e]" name="csvReaderException" duration-ms="36" started-at="2019-06-04T07:41:15Z" finished-at="2019-06-04T07:41:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- csvReaderException -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.varun.notificationsolution.service.WorkflowTest@6ec65b5e]" name="init" is-config="true" duration-ms="0" started-at="2019-06-04T07:41:15Z" finished-at="2019-06-04T07:41:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="emailCreatorException()[pri:0, instance:com.varun.notificationsolution.service.WorkflowTest@6ec65b5e]" name="emailCreatorException" duration-ms="1" started-at="2019-06-04T07:41:15Z" finished-at="2019-06-04T07:41:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailCreatorException -->
+        <test-method status="PASS" signature="jsonReaderException()[pri:0, instance:com.varun.notificationsolution.service.WorkflowTest@6ec65b5e]" name="jsonReaderException" duration-ms="3" started-at="2019-06-04T07:41:15Z" finished-at="2019-06-04T07:41:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- jsonReaderException -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.varun.notificationsolution.service.WorkflowTest@6ec65b5e]" name="init" is-config="true" duration-ms="0" started-at="2019-06-04T07:41:15Z" finished-at="2019-06-04T07:41:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="positiveTest()[pri:0, instance:com.varun.notificationsolution.service.WorkflowTest@6ec65b5e]" name="positiveTest" duration-ms="3" started-at="2019-06-04T07:41:15Z" finished-at="2019-06-04T07:41:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- positiveTest -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.varun.notificationsolution.service.WorkflowTest@6ec65b5e]" name="init" is-config="true" duration-ms="0" started-at="2019-06-04T07:41:15Z" finished-at="2019-06-04T07:41:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+      </class> <!-- com.varun.notificationsolution.service.WorkflowTest -->
+      <class name="com.varun.notificationsolution.util.UtilityTest">
+        <test-method status="PASS" signature="airlineListToMapNullTest()[pri:0, instance:com.varun.notificationsolution.util.UtilityTest@4a23350]" name="airlineListToMapNullTest" duration-ms="1" started-at="2019-06-04T07:41:14Z" finished-at="2019-06-04T07:41:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- airlineListToMapNullTest -->
+        <test-method status="PASS" signature="airlineListToMapTest()[pri:0, instance:com.varun.notificationsolution.util.UtilityTest@4a23350]" name="airlineListToMapTest" duration-ms="2" started-at="2019-06-04T07:41:14Z" finished-at="2019-06-04T07:41:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- airlineListToMapTest -->
+      </class> <!-- com.varun.notificationsolution.util.UtilityTest -->
+      <class name="com.varun.notificationsolution.util.CSVReaderUtilTest">
+        <test-method status="PASS" signature="filePathUnreadableTest()[pri:0, instance:com.varun.notificationsolution.util.CSVReaderUtilTest@451882b2]" name="filePathUnreadableTest" duration-ms="36" started-at="2019-06-04T07:41:14Z" finished-at="2019-06-04T07:41:14Z">
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[class path resource [random] cannot be resolved to absolute file path because it does not exist]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: class path resource [random] cannot be resolved to absolute file path because it does not exist
+	at org.springframework.util.ResourceUtils.getFile(ResourceUtils.java:177)
+	at com.varun.notificationsolution.util.CSVReaderUtil.getAllEntries(CSVReaderUtil.java:30)
+	at com.varun.notificationsolution.util.CSVReaderUtilTest.filePathUnreadableTest(CSVReaderUtilTest.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filePathUnreadableTest -->
+        <test-method status="PASS" signature="positiveTest()[pri:0, instance:com.varun.notificationsolution.util.CSVReaderUtilTest@451882b2]" name="positiveTest" duration-ms="32" started-at="2019-06-04T07:41:14Z" finished-at="2019-06-04T07:41:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- positiveTest -->
+      </class> <!-- com.varun.notificationsolution.util.CSVReaderUtilTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
